@@ -1,7 +1,11 @@
-p=float (input("enter principal amount:"))
-r=float(input("enter rate of intrest:"))
-t=float(input("enter time in year:"))
+import sys
 
-si=(p*r*t)/100
+def simInt(principal, interest, time):
+    return (principal * interest * time) / 100
 
-print("simple interest=",si )
+if __name__ == "__main__":
+    p = int(sys.argv[1])
+    i = int(sys.argv[2])
+    t = int(sys.argv[3])
+
+print("Simple Interest:", simInt(p, i, t))
