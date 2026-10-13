@@ -1,7 +1,7 @@
-p=float (input("enter principal amount:"))
-r=float(input("enter rate of intrest:"))
-t=float(input("enter time in year:"))
+from simpleinetrest import simInt
 
-si=(p*r*t)/100
+def test_simpleint_pos():
+    assert simInt(20000,8,12)==19200
 
-print("simple interest=",si )
+def test_simpleint_zer():
+    assert simInt(10000,7,0)==0
